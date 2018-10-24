@@ -1,0 +1,150 @@
+body{
+	margin: 0px;
+}
+
+.bg-green{
+	background-color: #33832f;
+}
+
+.bg-white{
+	background-color: white;
+}
+
+.raisedContainer{
+	margin-left: 30px;
+	margin-right:  30px;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	position: relative;
+	z-index: 3;
+}
+.contentContainer{
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+
+.boxShadow{
+	box-shadow: 15px 13px 15px -4px #4d4d4d, -12px 8px 20px -2px #4d4d4d;
+}	
+
+
+/* Nav Bar CSS */
+nav.reverseText-Bold a{
+	font-weight: bolder;
+	font-size:120%;
+	display:block;
+	padding:.5rem 1rem;
+	color:#ffffff;
+}
+
+.navbar-transparent {
+    background-color: transparent!important;
+    transition:500ms ease;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.navbar-transparent-scorlled {
+    background-color: #33832f;
+    padding-top: 10px;
+    color: #fff;
+}
+
+
+/*media queries*/
+
+/* iPhone 6, 7, 8 ----------- */
+@media(min-width: 0px) and (max-height: 800px){
+	.coverImages{
+		z-index: -1;
+		background-position: top;
+		width:130%;
+		opacity: .8;
+	}
+	.negativeMargin{
+		margin-top: -60px;
+	}
+	.container-bg{
+		padding-top: 75px;
+		padding-bottom: 150px;
+		height: 325px;
+		z-index: 10;
+	}
+	h1.headingText{
+		font-size: 16pt;
+		font-family: Impact;
+		color: white;
+		letter-spacing: 5px;
+	}
+	h3.coverSubText{
+		font-size: 12pt;
+		color: white;
+		letter-spacing: 5px;
+	}
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media(min-width : 801px) and (max-width : 1223px) {
+	
+	.coverImages{
+		z-index: -1;
+		background-position: top;
+		width:100%;
+		opacity: .8;
+	}
+	.negativeMargin{
+		margin-top: -60px;
+	}
+	.container-bg{
+		padding-top: 150px;
+		padding-bottom: 300px;
+		height: 400px;
+		z-index: 10;
+	}
+	h1.headingText{
+		font-size: 24pt;
+		font-family: Impact;
+		color: white;
+		letter-spacing: 6px;
+	}
+	h3.coverSubText{
+		font-size: 16pt;
+		color: white;
+		letter-spacing: 6px;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media(min-width : 1224px) {
+	
+	.coverImages{
+		z-index: -1;
+		background-position: top;
+		width:100%;
+		opacity: .8;
+	}
+	.negativeMargin{	
+		margin-top: -60px;
+	}
+	.container-bg{
+		padding-top: 275px;
+		padding-bottom: 275px;
+		height: 600px;
+		z-index: 10;
+	}
+	h1.headingText{
+		font-size: 36pt;
+		font-family: Impact;
+		color: white;
+		letter-spacing: 8px;
+	}
+	h3.coverSubText{
+		font-size: 28pt;
+		color: white;
+		letter-spacing: 8px;
+	}
+}
+
