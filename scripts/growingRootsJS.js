@@ -1,5 +1,8 @@
 $(document).ready(function(){
-
+	$("#submitContactForm").on('click', function(){
+		submitEmailRequest();
+	});
+	
 
 });
 
@@ -25,7 +28,58 @@ function addBackgroundColorToNavbar(windowSize){
 function checkIfBackgroundColorRequired(){
 	var windowSize = getWindowSize();
 	addBackgroundColorToNavbar(windowSize);
+}
+
+function submitEmailRequest(){
+
+	var nameOnSubmission = getNameFromRequest();
+	var emailAddress = getEmailAddress();
+	var phoneNumber = getPhoneNumber();
+	var preferredContact = getPreferredContact();
+	var message = getMessage();
+	
+	var templateParams = createTemplateParams(nameOnSubmission, emailAddress, phoneNumber, preferredContact, message);
+
+	sendEmail(templateParams);
+}
+
+function sendEmail(templateParams){
+
+emailjs.send('default_service', 'contactus', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
 
 }
 
-  
+function createTemplateParams(name, email, phone, contact, userMessage){
+	var templateParams = {
+		nameOnSubmission: name,
+		emailAddress: email, 
+		phoneNumber: phone, 
+		preferredContact: contact, 
+		message: userMessage
+	}
+
+	return templateParams;
+}
+
+function getNameFromRequest(){
+	return $("#userName").val();
+}
+
+function getEmailAddress(){
+	return $("#emailAddress").val();
+}
+function getPhoneNumber(){
+	return $("#phoneNumber").val();
+}
+function getPreferredContact(){
+	return $("#contactMethod").val();
+}
+function getMessage(){
+	return $("#userMessage").val();
+}
+
