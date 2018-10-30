@@ -1,17 +1,21 @@
 $(document).ready(function(){
 	$("#submitContactForm").on('click', function(){
-		submitEmailRequest();
+		validateForm();
 	});
 	
 
 });
 
+//nav bar script for green bar on window size and resizing
 $(window).scroll(function(){
 	var nav = document.querySelector('#navbar');
 	if(this.scrollY <= 10) nav.className = 'navbar fixed-top navbar-expand-lg navbar-dark navbar-transparent reverseText-Bold'; else nav.className = 'navbar fixed-top navbar-expand-lg navbar-dark navbar-transparent-scorlled reverseText-Bold';
 
 });
-
+function checkIfBackgroundColorRequired(){
+	var windowSize = getWindowSize();
+	addBackgroundColorToNavbar(windowSize);
+}
 function getWindowSize(){
 	return $(window).width();
 }
@@ -25,11 +29,8 @@ function addBackgroundColorToNavbar(windowSize){
 		navbar.className = 'collapse navbar-collapse';
 	}
 }
-function checkIfBackgroundColorRequired(){
-	var windowSize = getWindowSize();
-	addBackgroundColorToNavbar(windowSize);
-}
 
+//script for email
 function submitEmailRequest(){
 
 	var nameOnSubmission = getNameFromRequest();
@@ -83,3 +84,45 @@ function getMessage(){
 	return $("#userMessage").val();
 }
 
+//script for form validation
+function validateForm(){
+	var isAPhoneNumber = false;
+	var isAEmail = false;
+
+	isAPhoneNumber = checkPhoneNumber();
+	isAEmail = checkEmail();
+
+	if(isAPhoneNumber == true && isAEmail == true){	
+		$("#emailError").hide();
+		$("#phoneNumberError").hide();
+		submitEmailRequest();
+		alert('Email Sent');
+	}
+}
+function checkEmail(){
+	var userInputEmail = $("#emailAddress").val()
+	var isOkayToSubmit = false;
+
+	if(userInputEmail.includes('@')){
+		isOkayToSubmit = true;
+	}
+	else {
+		$("#emailError").show();
+	}
+
+	return isOkayToSubmit;
+}
+function checkPhoneNumber(){
+	var userInputPhoneNumber = $("#phoneNumber").val()
+	var phoneNumberRegEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+	var isAPhoneNumber = userInputPhoneNumber.match(phoneNumberRegEx);
+	var isOkayToSubmit = false;
+	
+	if (isAPhoneNumber == null) {
+		$("#phoneNumberError").show();
+	}
+	else {
+		isOkayToSubmit = true;
+	}
+	return isOkayToSubmit;
+}

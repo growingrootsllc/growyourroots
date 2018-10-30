@@ -24,6 +24,19 @@ h3{
 	padding-bottom: 30px;
 }
 
+.formError{
+	color: #FF0000; 
+	display: none;
+}
+
+.imgNegative{
+	width:100%;
+	margin-left: -140px;
+	border-radius: 25px;
+}
+
+
+
 .raisedContainer{
 	margin-left: 30px;
 	margin-right:  30px;
@@ -33,11 +46,7 @@ h3{
 	z-index: 3;
 }
 
-.imgNegative{
-	width:100%;
-	margin-left: -140px;
-	border-radius: 25px;
-}
+
 
 .roundedCorners{
 	border-radius: 15px;
