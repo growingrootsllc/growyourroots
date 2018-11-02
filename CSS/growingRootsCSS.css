@@ -35,8 +35,6 @@ h3{
 	border-radius: 25px;
 }
 
-
-
 .raisedContainer{
 	margin-left: 30px;
 	margin-right:  30px;
@@ -46,7 +44,10 @@ h3{
 	z-index: 3;
 }
 
-
+.rowMarginless{
+	margin-left: 0px;
+	margin-right: 0px;
+}
 
 .roundedCorners{
 	border-radius: 15px;
@@ -55,7 +56,7 @@ h3{
 /* Nav Bar CSS */
 nav.reverseText-Bold a{
 	font-weight: bolder;
-	font-size:120%;
+	font-size:130%;
 	display:block;
 	padding:.5rem 1rem;
 	color:#ffffff;
@@ -124,7 +125,7 @@ nav.reverseText-Bold a{
 	.coverImages{
 		z-index: -1;
 		background-position: top;
-		width:130%;
+		width:120%;
 		opacity: .8;
 	}
 	.negativeMargin{
@@ -139,12 +140,14 @@ nav.reverseText-Bold a{
 	h1.headingText{
 		font-size: 16pt;
 		font-family: Verdana;
+		font-weight: bold;
 		color: white;
 		letter-spacing: 5px;
 	}
 	h3.coverSubText{
 		font-size: 12pt;
 		font-family: Verdana;
+		font-weight: bold;
 		color: white;
 		letter-spacing: 5px;
 	}
@@ -194,12 +197,14 @@ nav.reverseText-Bold a{
 	h1.headingText{
 		font-size: 24pt;
 		font-family: Verdana;
+		font-weight: bold;
 		color: white;
 		letter-spacing: 6px;
 	}
 	h3.coverSubText{
 		font-size: 16pt;
 		font-family: Verdana;
+		font-weight: bold;
 		color: white;
 		letter-spacing: 6px;
 	}
@@ -247,12 +252,14 @@ nav.reverseText-Bold a{
 	h1.headingText{
 		font-size: 36pt;
 		font-family: Verdana;
+		font-weight: bold;
 		color: white;
 		letter-spacing: 8px;
 	}
 	h3.coverSubText{
 		font-size: 28pt;
 		font-family: Verdana;
+		font-weight: bold;
 		color: white;
 		letter-spacing: 8px;
 	}
