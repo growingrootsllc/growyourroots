@@ -138,12 +138,13 @@ nav.reverseText-Bold a{
 	}
 	h1.headingText{
 		font-size: 16pt;
-		font-family: Impact;
+		font-family: Verdana;
 		color: white;
 		letter-spacing: 5px;
 	}
 	h3.coverSubText{
 		font-size: 12pt;
+		font-family: Verdana;
 		color: white;
 		letter-spacing: 5px;
 	}
@@ -192,12 +193,13 @@ nav.reverseText-Bold a{
 	}
 	h1.headingText{
 		font-size: 24pt;
-		font-family: Impact;
+		font-family: Verdana;
 		color: white;
 		letter-spacing: 6px;
 	}
 	h3.coverSubText{
 		font-size: 16pt;
+		font-family: Verdana;
 		color: white;
 		letter-spacing: 6px;
 	}
@@ -244,12 +246,13 @@ nav.reverseText-Bold a{
 	}
 	h1.headingText{
 		font-size: 36pt;
-		font-family: Impact;
+		font-family: Verdana;
 		color: white;
 		letter-spacing: 8px;
 	}
 	h3.coverSubText{
 		font-size: 28pt;
+		font-family: Verdana;
 		color: white;
 		letter-spacing: 8px;
 	}

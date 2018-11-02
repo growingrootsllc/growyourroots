@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$("#submitContactForm").on('click', function(){
 		validateForm();
 	});
-	
+	checkIfBackgroundColorRequired();
 
 });
 
