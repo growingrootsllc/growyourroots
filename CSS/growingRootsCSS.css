@@ -5,6 +5,9 @@ body{
 h3{
 	color:#33832f;
 }
+.linkTextSmallest{
+		font-size: 15px;
+	}
 
 .bg-green{
 	background-color: #33832f;
@@ -116,6 +119,11 @@ nav.reverseText-Bold a{
 	margin-top: -75px;
 	border: 2px solid #33832f;
 	border-radius: 20px;
+	height:500px;
+}
+
+.resourceTextArea{
+	height:500px;
 }
 
 /*media queries*/
@@ -173,6 +181,7 @@ nav.reverseText-Bold a{
 		margin-lefteft: -140px;
 		border-radius: 25px;
 	}
+}
 }
 
 
@@ -278,5 +287,5 @@ nav.reverseText-Bold a{
 		margin-right: 250px;
 		margin-left: 250px;
 	}
-}
+
 
