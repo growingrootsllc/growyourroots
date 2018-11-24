@@ -5,9 +5,6 @@ body{
 h3{
 	color:#33832f;
 }
-.linkTextSmallest{
-		font-size: 15px;
-	}
 
 .bg-green{
 	background-color: #33832f;
@@ -119,17 +116,18 @@ nav.reverseText-Bold a{
 	margin-top: -75px;
 	border: 2px solid #33832f;
 	border-radius: 20px;
-	height:500px;
+	min-height: 500px;
 }
 
 .resourceTextArea{
-	height:500px;
+	min-height:400px;
 }
 
 /*media queries*/
 
 /* iPhone 6, 7, 8 ----------- */
 @media(max-height: 800px){
+	
 	.coverImages{
 		z-index: -1;
 		background-position: top;
@@ -158,6 +156,16 @@ nav.reverseText-Bold a{
 		font-weight: bold;
 		color: white;
 		letter-spacing: 5px;
+	}
+	h3.missionSubText{
+		font-size: 8pt;
+		font-family: Verdana;
+		font-weight: bold;
+		color: white;
+		letter-spacing: 2px;
+	}
+	.linkTextSmallest{
+		font-size: 8px;
 	}
 	.contentContainer{
 		margin-left: 10px;
@@ -217,6 +225,16 @@ nav.reverseText-Bold a{
 		color: white;
 		letter-spacing: 6px;
 	}
+	h3.missionSubText{
+		font-size: 10pt;
+		font-family: Verdana;
+		font-weight: bold;
+		color: white;
+		letter-spacing: 2px;
+	}
+	.linkTextSmallest{
+		font-size: 14px;
+	}
 	.contentContainer{
 		margin-left: 100px;
 		margin-right: 100px;
@@ -271,6 +289,16 @@ nav.reverseText-Bold a{
 		font-weight: bold;
 		color: white;
 		letter-spacing: 8px;
+	}
+	h3.missionSubText{
+		font-size: 14pt;
+		font-family: Verdana;
+		font-weight: bold;
+		color: white;
+		letter-spacing: 4px;
+	}
+	.linkTextSmallest{
+		font-size: 14px;
 	}
 	.contentContainer{
 		margin-left: 100px;
