@@ -38,8 +38,9 @@ function submitEmailRequest(){
 	var phoneNumber = getPhoneNumber();
 	var preferredContact = getPreferredContact();
 	var message = getMessage();
+	var descriptionOfUser = getDescriptionOfUser();
 	
-	var templateParams = createTemplateParams(nameOnSubmission, emailAddress, phoneNumber, preferredContact, message);
+	var templateParams = createTemplateParams(nameOnSubmission, emailAddress, phoneNumber, preferredContact, message, descriptionOfUser);
 
 	sendEmail(templateParams);
 }
@@ -55,16 +56,21 @@ emailjs.send('default_service', 'contactus', templateParams)
 
 }
 
-function createTemplateParams(name, email, phone, contact, userMessage){
+function createTemplateParams(name, email, phone, contact, userMessage, descriptionOfUser){
 	var templateParams = {
 		nameOnSubmission: name,
 		emailAddress: email, 
 		phoneNumber: phone, 
 		preferredContact: contact, 
-		message: userMessage
+		message: userMessage,
+		userDescription: descriptionOfUser
 	}
 
 	return templateParams;
+}
+
+function getDescriptionOfUser(){
+	return $("#description").val();
 }
 
 function getNameFromRequest(){
@@ -88,13 +94,16 @@ function getMessage(){
 function validateForm(){
 	var isAPhoneNumber = false;
 	var isAEmail = false;
+	var isASelection = false;
 
 	isAPhoneNumber = checkPhoneNumber();
 	isAEmail = checkEmail();
+	isASelection = checkUserDescription();
 
-	if(isAPhoneNumber == true && isAEmail == true){	
+	if(isAPhoneNumber == true && isAEmail == true && isASelection == true){	
 		$("#emailError").hide();
 		$("#phoneNumberError").hide();
+		$("#descriptionError").hide();
 		submitEmailRequest();
 		alert('Email Sent');
 	}
@@ -125,4 +134,15 @@ function checkPhoneNumber(){
 		isOkayToSubmit = true;
 	}
 	return isOkayToSubmit;
+}
+
+function checkUserDescription(){
+	var descriptionSelection = $('#description').val();
+	var isOkayToSubmit = false;
+	if(descriptionSelection == "--Make Selection--"){
+		$('#descriptionError').show();
+	}
+	else{
+		isOkayToSubmit = true;
+	}
 }

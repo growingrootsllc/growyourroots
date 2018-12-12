@@ -47,8 +47,8 @@
 	        <div class="dropdown-menu bg-green" aria-labelledby="navbarDropdown">
 	          <a class="dropdown-item" href="staff">Staff Bios</a> 
 	          <div class="dropdown-divider"></div>
-	          <a class="dropdown-item" href="history">Our History</a>
-	          <a class="dropdown-item" href="future">Our Future</a>
+<!-- 	          <a class="dropdown-item" href="history">Our History</a>
+	          <a class="dropdown-item" href="future">Our Future</a> -->
 	        </div>
 	      </li>
 	      <li class="nav-item">
@@ -88,6 +88,17 @@
 						</div>
 						<div class="col-lg-11">
 							<form>
+							  <div class="form-group">
+							    <label for="contactMethod">What Best Describes You</label>
+							    <select class="form-control" id="description">
+							      <option>--Make Selection--</option>
+							      <option>High School Student</option>
+							      <option>High School Grad</option>
+							      <option>Person Looking For A Job</option>
+							      <option>Person With General Questions</option>
+							    </select>
+							    <p class="formError" id="descriptionError">Please Select Description From Above</p>
+							  </div>
 							  <div class="form-group">
 								<label for="userName">Name</label>
 								<input type="email" class="form-control" id="userName" placeholder="Example: John Doe">
