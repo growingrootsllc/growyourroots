@@ -145,4 +145,5 @@ function checkUserDescription(){
 	else{
 		isOkayToSubmit = true;
 	}
+	return isOkayToSubmit;
 }
